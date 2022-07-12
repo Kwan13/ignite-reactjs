@@ -1,0 +1,92 @@
+.container {
+    border-radius: 8px;
+    background: var(--gray-400);
+    height: 4.5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+}
+
+.container + .container {
+    margin-top: 1.5;
+}
+
+.container button.trashButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    line-height: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.container button.trashButton:hover {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--danger);
+    background: var(--gray-500);
+    border-radius: 4px;
+}
+
+.container div.textContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.container div.textContent p {
+    font-size: 0.875rem;
+    line-height: 19.6px;
+    color: var(--gray-100);
+}
+
+.container div.textContent p.todoFinished {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.container div.textContent .checkedButton {
+    line-height: 0;
+    width: 1.063rem;
+    height: 1.063rem;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    background: transparent;
+    margin-top: 0.25;
+    cursor: pointer;
+    transition: background 0.1s, opacity 0.1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div.textContent .checkedButton:hover {
+    background: var(--blue-dark);
+    opacity: 20%;
+}
+
+.container div.textContent .active {
+    border: 1px solid var(--purple-dark);
+    line-height: 0;
+    width: 1.063rem;
+    height: 1.063rem;
+    border-radius: 50%;
+    background: var(--purple-dark);
+    margin-top: 0.25rem;
+    cursor: pointer;
+    transition: background 0.1s, border 0.1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div.textContent .active:hover {
+    background: var(--purple);
+    border: 1px solid var(--purple);
+}
