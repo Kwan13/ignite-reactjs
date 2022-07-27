@@ -1,3 +1,17 @@
+import { BrowserRouter } from 'react-router-dom'
+import { ShoppingCartProvider } from './contexts/ShoppingCart'
+
+import { Router } from './Router'
+
+import { GlobalStyle } from './styles/global'
+
 export function App() {
-  return <h1>ola</h1>
+  return (
+    <BrowserRouter>
+      <ShoppingCartProvider>
+        <Router />
+        <GlobalStyle />
+      </ShoppingCartProvider>
+    </BrowserRouter>
+  )
 }
